@@ -1,0 +1,1 @@
+# Algoritimos-e-Pensamento-Computacional---Aula-6-Veteranos
