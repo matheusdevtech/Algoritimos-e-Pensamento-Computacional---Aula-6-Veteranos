@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    char nomes[30][50];
+    float medias[30];
+    int i;
+
+    // Leitura dos dados dos alunos
+    for (i = 0; i < 30; i++) {
+        printf("Digite o nome do aluno %d: ", i + 1);
+        scanf(" %[^\n]", nomes[i]);
+
+        printf("Digite a media do aluno: ");
+        scanf("%f", &medias[i]);
+    }
+
+    // Exibindo a lista
+    printf("\n===== LISTA DE ALUNOS =====\n");
+
+    for (i = 0; i < 30; i++) {
+        printf("Nome: %s | Media: %.2f\n", nomes[i], medias[i]);
+    }
+
+    return 0;
+}
