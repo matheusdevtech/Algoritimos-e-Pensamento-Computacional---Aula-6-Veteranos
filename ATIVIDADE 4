@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int tabela[3][3];
+    int i, j;
+
+    // Preencher a matriz
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Digite um numero: ");
+            scanf("%d", &tabela[i][j]);
+        }
+    }
+
+    // Mostrar a matriz
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d", tabela[i][j]);
+
+            if (j < 2) {
+                printf(" - ");
+            }
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
