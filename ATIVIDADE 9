@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main() {
+
+    int produto[10];
+    int i;
+    int maior, posMaior;
+    int acima20 = 0;
+
+    printf("Digite a quantidade dos 10 produtos:\n");
+
+    for(i = 0; i < 10; i++) {
+        printf("Produto %d: ", i + 1);
+        scanf("%d", &produto[i]);
+    }
+
+    printf("\nQuantidade de cada produto:\n");
+    for(i = 0; i < 10; i++) {
+        printf("Produto %d = %d\n", i + 1, produto[i]);
+    }
+
+    printf("\nProdutos com estoque baixo:\n");
+    for(i = 0; i < 10; i++) {
+        if(produto[i] < 5 && produto[i] > 0) {
+            printf("Produto %d\n", i + 1);
+        }
+    }
+
+    printf("\nProdutos esgotados:\n");
+    for(i = 0; i < 10; i++) {
+        if(produto[i] == 0) {
+            printf("Produto %d\n", i + 1);
+        }
+    }
+
+    for(i = 0; i < 10; i++) {
+        if(produto[i] > 20) {
+            acima20++;
+        }
+    }
+
+    printf("\nProdutos com mais de 20 unidades: %d\n", acima20);
+
+    maior = produto[0];
+    posMaior = 1;
+
+    for(i = 1; i < 10; i++) {
+        if(produto[i] > maior) {
+            maior = produto[i];
+            posMaior = i + 1;
+        }
+    }
+
+    printf("Produto com maior estoque: %d\n", posMaior);
+    printf("Quantidade: %d\n", maior);
+
+    return 0;
+}
