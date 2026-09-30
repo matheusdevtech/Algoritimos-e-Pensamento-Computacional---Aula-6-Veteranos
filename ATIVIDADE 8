@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+
+    int v[10];
+    int num, i;
+    int cont = 0;
+
+    printf("Digite 10 numeros:\n");
+
+    for(i = 0; i < 10; i++) {
+        scanf("%d", &v[i]);
+    }
+
+    printf("Digite o numero que deseja procurar: ");
+    scanf("%d", &num);
+
+    printf("Posicoes: ");
+
+    for(i = 0; i < 10; i++) {
+        if(v[i] == num) {
+            cont++;
+            printf("%d ", i);
+        }
+    }
+
+    if(cont > 0) {
+        printf("\nO numero %d foi encontrado %d vez(es).\n", num, cont);
+    } else {
+        printf("\nNumero nao encontrado.\n");
+    }
+
+    return 0;
+}
