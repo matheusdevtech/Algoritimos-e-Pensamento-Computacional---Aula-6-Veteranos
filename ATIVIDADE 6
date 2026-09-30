@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+
+    float notas[3][4];
+    int i;
+
+    for(i = 0; i < 3; i++) {
+
+        printf("\nAluno %d\n", i + 1);
+
+        scanf("%f", &notas[i][0]);
+        scanf("%f", &notas[i][1]);
+        scanf("%f", &notas[i][2]);
+
+        notas[i][3] = (notas[i][0] + notas[i][1] + notas[i][2]) / 3;
+    }
+
+    printf("\nAluno\tN1\tN2\tN3\tMedia\n");
+
+    for(i = 0; i < 3; i++) {
+        printf("%d\t%.1f\t%.1f\t%.1f\t%.1f\n",
+               i + 1,
+               notas[i][0],
+               notas[i][1],
+               notas[i][2],
+               notas[i][3]);
+    }
+
+    return 0;
+}
