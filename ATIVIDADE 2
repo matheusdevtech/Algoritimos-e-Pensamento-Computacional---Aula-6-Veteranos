@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    float medias[30];
+    char nomes[30][100];
+    int contador;
+
+    for (contador = 0; contador <= 29; contador++) {
+        printf("Digite o nome do aluno %d: ", contador);
+        scanf("%s", nomes[contador]);
+
+        printf("Digite a media %d: ", contador);
+        scanf("%f", &medias[contador]);
+    }
+
+    for (contador = 0; contador <= 29; contador++) {
+        printf("O aluno %s tem media %.1f\n",
+               nomes[contador], medias[contador]);
+    }
+
+    return 0;
+}
